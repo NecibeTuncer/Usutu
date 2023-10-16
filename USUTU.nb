@@ -1,0 +1,162 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5186,        154]
+NotebookOptionsPosition[      4484,        133]
+NotebookOutlinePosition[      4885,        149]
+CellTagsIndexPosition[      4842,        146]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"polys", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"beta", "-", "betahat"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"c", "+", "d", "+", "delta"}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{"chat", "+", "dhat", "+", "deltahat"}], ")"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"c", "*", "d"}], "+", 
+       RowBox[{"c", "*", "delta"}], "+", 
+       RowBox[{"d", "*", "delta"}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"chat", "*", "dhat"}], "+", 
+       RowBox[{"chat", "*", "deltahat"}], "+", 
+       RowBox[{"dhat", "*", "deltahat"}]}], ")"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"beta", "*", "c", "*", "d", "*", "delta"}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{"betahat", "*", "chat", "*", "dhat", "*", "deltahat"}], 
+      ")"}]}]}], "}"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{3.89042312987107*^9},
+ CellLabel->"In[1]:=",ExpressionUUID->"b86117bb-8dc7-4fc0-813f-01b966a0f363"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"beta", "-", "betahat"}], ",", 
+   RowBox[{
+   "c", "-", "chat", "+", "d", "+", "delta", "-", "deltahat", "-", "dhat"}], 
+   ",", 
+   RowBox[{
+    RowBox[{"c", " ", "d"}], "+", 
+    RowBox[{"c", " ", "delta"}], "+", 
+    RowBox[{"d", " ", "delta"}], "-", 
+    RowBox[{"chat", " ", "deltahat"}], "-", 
+    RowBox[{"chat", " ", "dhat"}], "-", 
+    RowBox[{"deltahat", " ", "dhat"}]}], ",", 
+   RowBox[{
+    RowBox[{"beta", " ", "c", " ", "d", " ", "delta"}], "-", 
+    RowBox[{"betahat", " ", "chat", " ", "deltahat", " ", "dhat"}]}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.8904231313761654`*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"84f59f49-4782-432c-a9cd-6441a8ae5db1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"polys", "\[Equal]", " ", "0"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"beta", ",", "c", ",", "d", ",", "delta"}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{3.8904231435191717`*^9},
+ CellLabel->"In[3]:=",ExpressionUUID->"942f7dc8-e0fb-4f25-8be5-03ce0d6f426a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"beta", "\[Rule]", "betahat"}], ",", 
+     RowBox[{"c", "\[Rule]", "chat"}], ",", 
+     RowBox[{"d", "\[Rule]", "deltahat"}], ",", 
+     RowBox[{"delta", "\[Rule]", "dhat"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"beta", "\[Rule]", "betahat"}], ",", 
+     RowBox[{"c", "\[Rule]", "chat"}], ",", 
+     RowBox[{"d", "\[Rule]", "dhat"}], ",", 
+     RowBox[{"delta", "\[Rule]", "deltahat"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"beta", "\[Rule]", "betahat"}], ",", 
+     RowBox[{"c", "\[Rule]", "deltahat"}], ",", 
+     RowBox[{"d", "\[Rule]", "chat"}], ",", 
+     RowBox[{"delta", "\[Rule]", "dhat"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"beta", "\[Rule]", "betahat"}], ",", 
+     RowBox[{"c", "\[Rule]", "deltahat"}], ",", 
+     RowBox[{"d", "\[Rule]", "dhat"}], ",", 
+     RowBox[{"delta", "\[Rule]", "chat"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"beta", "\[Rule]", "betahat"}], ",", 
+     RowBox[{"c", "\[Rule]", "dhat"}], ",", 
+     RowBox[{"d", "\[Rule]", "chat"}], ",", 
+     RowBox[{"delta", "\[Rule]", "deltahat"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"beta", "\[Rule]", "betahat"}], ",", 
+     RowBox[{"c", "\[Rule]", "dhat"}], ",", 
+     RowBox[{"d", "\[Rule]", "deltahat"}], ",", 
+     RowBox[{"delta", "\[Rule]", "chat"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.890423145121649*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"d211e913-2586-4970-82d3-cc037c6ed79d"]
+}, Open  ]]
+},
+WindowSize->{808, 467},
+WindowMargins->{{18.5, Automatic}, {Automatic, 22.5}},
+FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (July 9, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"4b20ab34-81eb-4194-9887-ccd1f4baf588"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1184, 31, 124, "Input",ExpressionUUID->"b86117bb-8dc7-4fc0-813f-01b966a0f363"],
+Cell[1767, 55, 728, 19, 71, "Output",ExpressionUUID->"84f59f49-4782-432c-a9cd-6441a8ae5db1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2532, 79, 362, 9, 48, "Input",ExpressionUUID->"942f7dc8-e0fb-4f25-8be5-03ce0d6f426a"],
+Cell[2897, 90, 1571, 40, 128, "Output",ExpressionUUID->"d211e913-2586-4970-82d3-cc037c6ed79d"]
+}, Open  ]]
+}
+]
+*)
+
