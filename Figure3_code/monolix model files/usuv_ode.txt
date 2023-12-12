@@ -1,0 +1,35 @@
+DESCRIPTION: Structural model of Usutu Virus in-host (sparrows).
+Variables
+-T is the number uninfected target cells per mL
+-E is the number of eclipse phase infected cells per mL
+-I is the number of virus producing infected cells per mL
+-V is the virus PFU per mL
+
+Parameters
+-beta is the rate target cells are infected
+-k is the rate that eclipse phase cells become infectious
+-p is the viral production rate
+-delta is the infected cell death rate
+-c is the viral clearance rate
+
+[LONGITUDINAL]
+input={beta, delta, c, p, k}
+
+EQUATION:
+;defining other parameters
+
+;ICs
+t_0=0
+T_0=4e6  ;leukocytes/mL
+E_0=0          ; infected leukocytes/mL
+I_0=0           ; infected leukocytes/mL
+V_0=10     ; virus/mL
+
+;ODE System
+ddt_T=-beta*T*V
+ddt_E=beta*T*V-k*E
+ddt_I=k*E-delta*I
+ddt_V=p*I-c*V
+
+OUTPUT:
+output={V}
